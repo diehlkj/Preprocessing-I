@@ -59,40 +59,90 @@ html, body {
 
 // My Code After This Line
 
-@import url('https://fonts.googleapis.com/css?family=Bungee|Nunito:200,300,400,700,900&display=swap');
+@white: #fff;
+@gray1: #ddd;
+@gray2: #aaa;
+@gray3: #444;
 
-@font1: font-family: 'Bungee', sans-serif;
-@font2: font-family: 'Nunito', sans-serif;
-
-@grey1: #1B1B1B;
-@grey2: #595959;
-@blue: #2B74B8;
-
-body{
-	background: @blue;
-}
-h1{}
-h2{}
-section{}
-
-.flex-col{
+.flex-col {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 }
-.flex-row{
+.flex-row {
 	display: flex;
 	flex-direction: row;
 }
-.flex-wrap{
-	flex-wrap: wrap;
+.margin-center {
+	margin: 0 auto;
+}
+.rounded {
+	border-radius: 5px;
 }
 
-.debug{
-	border: 1px solid red;
-}
-.container{
+.container {
+	width: 100%;
+	max-width: 900px;
 	.flex-col();
-	background: @grey1;
+	.margin-center();
+	justify-content: center;
+	align-items: center;
+	font-family: Arial, Helvetica, sans-serif;
 }
-#current{}
+
+nav {
+	width: 100%;
+	.flex-row();
+	justify-content: flex-end;
+	align-items: center;
+
+	a {
+		text-decoration: none;
+		margin: 20px 13px;
+		color: #000;
+	}
+}
+header {
+	.flex-col();
+	.rounded();
+	justify-content: center;
+	align-items: flex-start;
+	background: @gray1;
+	width: 100%;
+	padding: 60px 30px;
+
+	img {
+		margin-bottom: 10px;
+	}
+
+	h1 {
+		font-size: 55px;
+		margin-bottom: 10px;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+
+	hr {
+		width: 100%;
+		border: 1px solid @gray2;
+		margin: 30px 0;
+	}
+
+	p {
+		margin-bottom: 30px;
+	}
+
+	a {
+		.rounded();
+		padding: 10px;
+		font-size: 20px;
+		text-decoration: none;
+		background: @gray3;
+		color: @white;
+	}
+}
+section {}
+.intro {}
+.history {}
+footer {}
