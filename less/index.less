@@ -56,3 +56,43 @@ table {
 html, body {
 	height: 100%;
 }
+
+// My Code After This Line
+
+@import url('https://fonts.googleapis.com/css?family=Bungee|Nunito:200,300,400,700,900&display=swap');
+
+@font1: font-family: 'Bungee', sans-serif;
+@font2: font-family: 'Nunito', sans-serif;
+
+@grey1: #1B1B1B;
+@grey2: #595959;
+@blue: #2B74B8;
+
+body{
+	background: @blue;
+}
+h1{}
+h2{}
+section{}
+
+.flex-col{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.flex-row{
+	display: flex;
+	flex-direction: row;
+}
+.flex-wrap{
+	flex-wrap: wrap;
+}
+
+.debug{
+	border: 1px solid red;
+}
+.container{
+	.flex-col();
+	background: @grey1;
+}
+#current{}
