@@ -1,1 +1,346 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.debug {
+  border: 1px solid red;
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Nunito ExtraLight'), local('Nunito-ExtraLight'), url(https://fonts.gstatic.com/s/nunito/v11/XRXW3I6Li01BKofA-seUYevN.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v11/XRXV3I6Li01BKofINeaE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Nunito Black'), local('Nunito-Black'), url(https://fonts.gstatic.com/s/nunito/v11/XRXW3I6Li01BKofAtsGUYevN.ttf) format('truetype');
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.margin-center {
+  margin: 0 auto;
+}
+.rounded {
+  border-radius: 5px;
+}
+.container {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+}
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  nav {
+    justify-content: center;
+  }
+}
+nav a {
+  text-decoration: none;
+  margin: 30px 13px;
+  color: #000;
+}
+nav a:hover {
+  color: dodgerblue;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: flex-start;
+  background: #ddd;
+  width: 100%;
+  padding: 60px 30px;
+}
+header img {
+  margin-bottom: 10px;
+  width: 40%;
+}
+header h1 {
+  font-size: 55px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+header h3 {
+  font-size: 20px;
+  font-weight: 200;
+}
+header hr {
+  width: 100%;
+  border: 1px solid #aaa;
+  margin: 30px 0;
+}
+header p {
+  margin-bottom: 30px;
+}
+header a {
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  background: #444;
+  color: #fff;
+}
+header a:hover {
+  background: dodgerblue;
+}
+section {
+  width: 100%;
+  margin-top: 40px;
+}
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media screen and (max-width: 750px) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.intro div:nth-child(1) {
+  width: 47%;
+}
+@media screen and (max-width: 750px) {
+  .intro div:nth-child(1) {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .intro div:nth-child(1) {
+    width: 100%;
+  }
+}
+.intro div:nth-child(2) {
+  width: 50%;
+}
+@media screen and (max-width: 750px) {
+  .intro div:nth-child(2) {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .intro div:nth-child(2) {
+    width: 100%;
+  }
+}
+.intro h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.intro p {
+  line-height: 150%;
+}
+.intro table {
+  width: 100%;
+}
+.intro table tr {
+  border: 1px solid #aaa;
+}
+.intro table tr td {
+  padding: 15px;
+}
+.history {
+  display: flex;
+  flex-direction: column;
+}
+.history h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.history table {
+  width: 100%;
+  text-align: left;
+}
+.history table tr:nth-child(even) {
+  background: #ddd;
+}
+.history table th {
+  font-weight: bold;
+}
+.history table td,
+.history table th {
+  padding: 15px;
+  border-top: 1px solid #aaa;
+}
+.history table td:nth-child(1) {
+  font-weight: bold;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+  padding: 30px 0;
+  background: #444;
+  color: #fff;
+}
