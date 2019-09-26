@@ -59,6 +59,10 @@ html, body {
 
 // My Code After This Line
 
+.debug {
+	border: 1px solid red;
+}
+
 @white: #fff;
 @gray1: #ddd;
 @gray2: #aaa;
@@ -97,7 +101,7 @@ nav {
 
 	a {
 		text-decoration: none;
-		margin: 20px 13px;
+		margin: 30px 13px;
 		color: #000;
 	}
 }
@@ -142,7 +146,78 @@ header {
 		color: @white;
 	}
 }
-section {}
-.intro {}
-.history {}
-footer {}
+section {
+	width: 100%;
+	margin-top: 40px;
+}
+.intro {
+	.flex-row();
+	justify-content: space-between;
+	align-items: flex-start;
+
+	div:nth-child(1) {
+		width: 47%;
+	}
+	div:nth-child(2) {
+		width: 50%;
+	}
+
+	h2 {
+		font-size: 30px;
+		margin-bottom: 10px;
+	}
+	p {
+		line-height: 150%;
+	}
+
+	table {
+		width: 100%;
+		tr {
+			border: 1px solid @gray2;
+			td {
+				padding: 15px;
+			}
+		}
+	}
+}
+.history {
+	.flex-col();
+
+	h2 {
+		font-size: 30px;
+		margin-bottom: 10px;
+	}
+
+	table {
+		width: 100%;
+		text-align: left;
+
+		tr:nth-child(even) {
+			background: @gray1;
+		}
+
+		th{
+			font-weight: bold;
+		}
+
+		td,th {
+			padding: 15px;
+			border-top: 1px solid @gray2;
+		}
+
+		td:nth-child(1) {
+			font-weight: bold;
+		}
+	}
+}
+
+footer {
+	.flex-col();
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+	width: 100%;
+	padding: 30px 0;
+	background: @gray3;
+	color: @white;
+}
