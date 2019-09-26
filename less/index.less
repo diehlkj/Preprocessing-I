@@ -63,6 +63,8 @@ html, body {
 	border: 1px solid red;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,400,900&display=swap');
+@font: 'Nunito', sans-serif;
 @white: #fff;
 @gray1: #ddd;
 @gray2: #aaa;
@@ -86,11 +88,12 @@ html, body {
 .container {
 	width: 100%;
 	max-width: 900px;
+	padding: 0 10px;
 	.flex-col();
 	.margin-center();
 	justify-content: center;
 	align-items: center;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: @font;
 }
 
 nav {
@@ -99,10 +102,17 @@ nav {
 	justify-content: flex-end;
 	align-items: center;
 
+	@media screen and (max-width: 500px) {
+		justify-content: center;
+	}
+
 	a {
 		text-decoration: none;
 		margin: 30px 13px;
 		color: #000;
+	}
+	a:hover {
+		color: dodgerblue;
 	}
 }
 header {
@@ -116,15 +126,18 @@ header {
 
 	img {
 		margin-bottom: 10px;
+		width: 40%;
 	}
 
 	h1 {
 		font-size: 55px;
 		margin-bottom: 10px;
+		font-weight: 400;
 	}
 
 	h3 {
 		font-size: 20px;
+		font-weight: 200;
 	}
 
 	hr {
@@ -140,10 +153,14 @@ header {
 	a {
 		.rounded();
 		padding: 10px;
+		margin-bottom: 10px;
 		font-size: 20px;
 		text-decoration: none;
 		background: @gray3;
 		color: @white;
+	}
+	a:hover {
+		background: dodgerblue;
 	}
 }
 section {
@@ -155,11 +172,30 @@ section {
 	justify-content: space-between;
 	align-items: flex-start;
 
+	@media screen and (max-width: 750px) {
+		.flex-col();
+		justify-content: center;
+		align-items: center;
+	}
+
 	div:nth-child(1) {
 		width: 47%;
+		@media screen and (max-width: 750px) {
+			width: 80%;
+			margin-bottom: 20px;
+		}
+		@media screen and (max-width: 500px) {
+			width: 100%;
+		}
 	}
 	div:nth-child(2) {
 		width: 50%;
+		@media screen and (max-width: 750px) {
+			width: 80%;
+		}
+		@media screen and (max-width: 500px) {
+			width: 100%;
+		}
 	}
 
 	h2 {

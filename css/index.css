@@ -137,6 +137,27 @@ body {
 .debug {
   border: 1px solid red;
 }
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Nunito ExtraLight'), local('Nunito-ExtraLight'), url(https://fonts.gstatic.com/s/nunito/v11/XRXW3I6Li01BKofA-seUYevN.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v11/XRXV3I6Li01BKofINeaE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Nunito Black'), local('Nunito-Black'), url(https://fonts.gstatic.com/s/nunito/v11/XRXW3I6Li01BKofAtsGUYevN.ttf) format('truetype');
+}
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -154,12 +175,13 @@ body {
 .container {
   width: 100%;
   max-width: 900px;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 nav {
   width: 100%;
@@ -168,10 +190,18 @@ nav {
   justify-content: flex-end;
   align-items: center;
 }
+@media screen and (max-width: 500px) {
+  nav {
+    justify-content: center;
+  }
+}
 nav a {
   text-decoration: none;
   margin: 30px 13px;
   color: #000;
+}
+nav a:hover {
+  color: dodgerblue;
 }
 header {
   display: flex;
@@ -185,13 +215,16 @@ header {
 }
 header img {
   margin-bottom: 10px;
+  width: 40%;
 }
 header h1 {
   font-size: 55px;
   margin-bottom: 10px;
+  font-weight: 400;
 }
 header h3 {
   font-size: 20px;
+  font-weight: 200;
 }
 header hr {
   width: 100%;
@@ -204,10 +237,14 @@ header p {
 header a {
   border-radius: 5px;
   padding: 10px;
+  margin-bottom: 10px;
   font-size: 20px;
   text-decoration: none;
   background: #444;
   color: #fff;
+}
+header a:hover {
+  background: dodgerblue;
 }
 section {
   width: 100%;
@@ -219,11 +256,40 @@ section {
   justify-content: space-between;
   align-items: flex-start;
 }
+@media screen and (max-width: 750px) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .intro div:nth-child(1) {
   width: 47%;
 }
+@media screen and (max-width: 750px) {
+  .intro div:nth-child(1) {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .intro div:nth-child(1) {
+    width: 100%;
+  }
+}
 .intro div:nth-child(2) {
   width: 50%;
+}
+@media screen and (max-width: 750px) {
+  .intro div:nth-child(2) {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .intro div:nth-child(2) {
+    width: 100%;
+  }
 }
 .intro h2 {
   font-size: 30px;
